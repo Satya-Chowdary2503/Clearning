@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Django Online Exam</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+            $("#but1").Click(function()
+            {
+                $(".rb").show();
+                $(".rb").attr("disabled"true);
+            });
+		});
+		function getanswers()
+		{
+			document.getElementsById(UserAnswers).innerHTML="";
+			var e=document.getElementsByTagName('input');
+			for(i=0;i<=e.length;i++)
+			{
+				if(e[i].type=="radio")
+				{
+					if(e[i].checked)
+					{
+						document.getElementsById(UserAnswers).innerHTML+="Q "+e[i].name+"The Answer You Are Selected Is :"+e[i].value+"<br/>";
+					}
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<center>
+		<h1> How to Create Online Exam Dynamically From MySql(PhpMyAdmin)</h1>
+		<h3>python Django with javascript</h3>
+		<hr/>
+	</center>
+	<div style="padding-left: 30px;">
+		{% for result in Exam %}
+		<table>
+			<tr>
+				<td>{{result.id}} ) {{result.Question}} ?</td>
+			</tr>
+			<tr>
+				<td><input type="radio" id="Option1" class="rb" name="{{result.id}}" value="{{result.Option1}}">{{result.Option1}}</td>
+			</tr>
+			<tr>
+				<td><input type="radio" id="Option2" class="rb" name="{{result.id}}" value="{{result.Option2}}">{{result.Option2}}</td>
+			</tr>
+			<tr>
+				<td><input type="radio" id="Option3" class="rb" name="{{result.id}}" value="{{result.Option3}}">{{result.Option3}}</td>
+			</tr>
+			<tr>
+				<td><input type="radio" id="Option4" class="rb" name="{{result.id}}" value="{{result.Option4}}">{{result.Option4}}</td>
+			</tr>
+			<tr>
+				<td><label id="Corans" class="rb" style="display: none; color: green;"><b>{{result.Corrans}}</b></label></td>
+			</tr>
+			<hr/>
+		</table>
+		{% endfor %}
+		<input type="Submit" value="Click For Results" id="but1" onclick="getanswers();"/>
+		<hr/>
+		<b id="UserAnswers"></b>
+		<hr/>
+	</div>	
+</body>
+</html>

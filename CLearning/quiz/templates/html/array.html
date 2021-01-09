@@ -1,0 +1,35 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block title %} Arrays {% endblock %}
+{% block content %}
+<div class="container text-center">
+	<h1>Chapter-7</h1>
+
+  <h4>Array<br>
+Array is the collection of similar data types or collection of similar entity stored in
+contiguous memory location. Array of character is a string. Each data item of an
+array is called an element. And each element is unique and located in separated
+memory location. Each of elements of an array share a variable but each element
+having different index no. known as subscript.
+An array can be a single dimensional or multi-dimensional and number of
+subscripts determines its dimension. And number of subscript is always starts with
+zero. One dimensional array is known as vector and two dimensional arrays are
+known as matrix.
+ADVANTAGES: array variable can store more than one value at a time where
+other variable can store one value at a time.
+</h4>
+  <img src="{% static 'images/0046.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0047.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0048.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0049.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0050.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0051.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0052.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0053.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0054.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0055.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0056.jpg' %}" width="50%" height="50%">
+ <br>
+    <a href="{% url 'strt' %}" class="btn md btn-info">Start Learning</a>
+</div> 
+{% endblock %}

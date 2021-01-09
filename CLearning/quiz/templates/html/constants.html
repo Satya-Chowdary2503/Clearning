@@ -1,0 +1,14 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block title %} Constants {% endblock %}
+{% block content %}
+<div class="container text-center">
+	<h1>Chapter-3</h1>
+  <img src="{% static 'images/0021.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0022.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0023.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0024.jpg' %}" width="50%" height="50%">
+  <br>
+    <a href="{% url 'strt' %}" class="btn md btn-info">Start Learning</a>
+</div> 
+{% endblock %}

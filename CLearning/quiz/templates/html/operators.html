@@ -1,0 +1,17 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block title %} Expressions,Operators {% endblock %}
+{% block content %}
+<div class="container text-center">
+	<h1>Chapter-5</h1>
+  <img src="{% static 'images/0025.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0026.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0027.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0028.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0029.jpg' %}" width="50%" height="50%">
+  <img src="{% static 'images/0030.jpg' %}" width="50%" height="50%">
+   <img src="{% static 'images/0031.jpg' %}" width="50%" height="50%">
+ <br>
+    <a href="{% url 'strt' %}" class="btn md btn-info">Start Learning</a>
+</div> 
+{% endblock %}

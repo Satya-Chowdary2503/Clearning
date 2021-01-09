@@ -1,0 +1,41 @@
+v{% extends 'html/base.html' %}
+{% load static %}
+{% block title %} C Learning {% endblock %}
+{% block content %}
+<div class="container-fluid">
+	<div class="row mt-1">
+		<div class="card col-sm-3 mr-1 ml-2" style="background-color: light-blue;">
+			<nav class="navbar" style="background-color: yellow;">
+			  <ul class="navbar-nav">
+			    <li class="nav-item">
+			      <a class="nav-link" href="{% url 'strt' %}">Introduction</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="{% url 'int' %}">C Language</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="{% url 'struct' %}">Structer Of C Language </a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="{% url 'ca' %}">Characterset,Identifers,Keywords,Datatypes</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="{% url 'co' %}">Constants</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="{% url 'op' %}">Expressions,Operators</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="{% url 'lo' %}">Loops,Conditional Statements</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="{% url 'ar' %}">Arrays</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="{% url 'con' %}">Conclusion</a>
+			    </li>
+			</nav>
+	
+</div>
+    
+{% endblock %}

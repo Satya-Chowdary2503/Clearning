@@ -1,0 +1,10 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block title %} Conclusion {% endblock %}
+{% block content %}
+<div class="container text-center">
+  <img src="{% static 'images/th.jpg' %}" width="50%" height="50%">
+ <br>
+    <a href="{% url 'strt' %}" class="btn md btn-info">Start Learning</a>
+</div> 
+{% endblock %}
